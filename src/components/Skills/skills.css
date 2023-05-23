@@ -1,0 +1,177 @@
+.skills_container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom: 1px solid white;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+
+.skills_container h1 {
+    margin-left: 100px;
+
+}
+
+.expand{
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  width: 100%;
+  border-top: 1px solid white;
+}
+
+.skills_container  img{
+  width: 50px;
+  border: none;
+  background: none;
+}
+
+.skills_container button{
+  border: none;
+  background: none;
+
+
+}
+.grid-container {
+    width: 100%;
+    border-bottom: 1px solid white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+    opacity: 0;
+    animation: expand 1.5s ease forwards;
+    
+  }
+  @keyframes expand {
+    0% {
+      opacity: 0;
+      max-height: 0;
+    }
+    100% {
+      opacity: 1;
+      max-height: 1000px; /* Ajusta la altura máxima según sea necesario */
+    }
+  }
+
+  .grid-container-hidden{
+    width: 100%;
+    border-bottom: 1px solid white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeOut 1.5s ease forwards; 
+  }
+
+  @keyframes fadeOut {
+    from { opacity: 1; 
+            max-height: 1000px; 
+           
+    }
+    to { opacity: 0; 
+         max-height: 0px;
+    }
+  }
+  
+  .skill {
+    flex: 1 0 calc(25% - 20px); /* Cada fila ocupa 25% del espacio menos el espacio entre las habilidades */
+    margin: 10px; /* Espacio entre las habilidades */
+  }
+
+  .skill img{
+    width: 50px;
+    height: 50px;
+}
+
+.grid-container-soft {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
+  opacity: 0;
+
+  animation: expand 1.5s ease forwards;
+
+  }
+
+
+  .grid-container-soft-hidden {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeOut 1.5s ease forwards;
+  
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #ffffff; /* Color de fondo del pulgar */
+      border-radius: 4px; /* Radio de borde del pulgar */
+    }
+    
+    /* Estilos para el pulgar de la barra de desplazamiento al pasar el mouse sobre él */
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #cccccc; /* Color de fondo del pulgar al pasar el mouse */
+    }
+
+
+
+    /*<<<<<<<<<<<<<<<<< RESPONSIVE >>>>>>>>>>>>>>>>>>*/
+
+
+    @media (width<800px){
+.skills_container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 1px solid white;
+    }
+.expand{
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    width: 100%;
+    border-top: 1px solid white;
+    padding-right: 70px;
+}
+.grid-container {
+  width: 100%;
+  border-bottom: 1px solid white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
+  opacity: 0;
+  animation: expand 1.5s ease forwards;
+  padding-left: 15px;
+  
+}
+    
+  .grid-container-soft {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
+  opacity: 0;
+  animation: expand 1.5s ease forwards;
+  margin-left: 45px;
+  overflow-y: auto;
+  }
+
+  .grid-container-soft-hidden {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+    opacity: 0;
+    margin-left: 45px;
+    animation: fadeOut 1.5s ease forwards;
+    }
+    }

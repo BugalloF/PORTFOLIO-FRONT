@@ -1,0 +1,226 @@
+.project_base{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  cursor: pointer;
+}
+.project_base h1 {
+  margin-left: 150px;
+  margin-right: 100px;
+}
+.project_base img{
+  width: 50px;
+}
+.expand-projects{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.expand-projects img{
+  margin-left: -105px;
+}
+
+.project_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 300px;
+    margin-right: 20px;
+    overflow: hidden;
+    opacity: 0;
+    animation: expand 2s ease forwards;
+  }
+
+  .project_container-hidden {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 300px;
+    margin-right: 20px;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeOut 2s ease forwards;
+  }
+
+
+  /* ///>>>>>>>>>>>>>>>>>>>>>>>>>» */
+.projects_left{
+  width: 15%;
+}
+
+.projects_left img{
+  height: 100px;
+  width: 100px;
+}
+.projects_left button{
+  background: none;
+  border: none;
+}
+
+.projects_left button img{
+  height: 50px;
+  cursor: pointer;
+  width: 50px;
+  
+}
+
+.project_row_middle{
+  width: 50%;
+
+}
+
+.middle_row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+
+
+.btn-img{
+  width: 40px;
+}
+
+.custom-carousel {
+    display: flex; 
+    flex-direction: row;
+    height: 250px;
+    width: 20%;
+    align-items: center;
+  }
+  
+.custom-carousel .carousel .control-dots .dot.selected {
+    background-color: black; /* Cambia el color del punto seleccionado */
+    color: black;
+  }
+.carousel.carousel-slider {
+    height: 240px;
+}
+.arrow {
+    position: absolute; 
+    top: 50%; /* Ajusta la posición verticalmente según tus necesidades */
+    transform: translateY(-50%); /* Centra verticalmente las flechas */
+    background-color: rgba(0, 0, 0, 0.5); /* Ajusta el color de fondo de las flechas según tus necesidades */
+    color: #fff; /* Ajusta el color del texto de las flechas según tus necesidades */
+    padding: 10px; /* Ajusta el espacio interno de las flechas según tus necesidades */
+    font-size: 16px; /* Ajusta el tamaño del texto de las flechas según tus necesidades */
+    cursor: pointer;
+
+  }
+  
+.project_images{
+    cursor: pointer;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+  }
+
+  .logo-container-projects {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    overflow: hidden;
+    opacity: 0;
+    animation: expandProject 1.5s ease forwards;
+    
+  }
+  @keyframes expandProject {
+    0% {
+      opacity: 0;
+      max-height: 0;
+    }
+    100% {
+      opacity: 1;
+      max-height: 500px; /* Ajusta la altura máxima según sea necesario */
+    }
+  }
+
+  .logo-container-projects-hidden{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    overflow: hidden;
+    padding-top: 20px;
+    opacity: 1;
+    max-height: 500px; 
+    animation: fadeOut 1.5s ease forwards;
+  }
+  @keyframes fadeOut {
+    from { opacity: 1; 
+            max-height: 500px; 
+           
+    }
+    to { opacity: 0; 
+         max-height: 0px;
+    }
+  }
+  
+  .logo-wrapper-projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+
+  .logo-image-projects {
+    max-width: 45px;
+    height: 45px;
+  }
+  
+
+  @media(width<800px){
+    .project_container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: fit-content;
+      overflow: hidden;
+      opacity: 0;
+      animation: expand 2s ease forwards;
+      margin-left: 5px;
+      margin-right: 5px;
+      border-top: 1px solid white;
+    }
+    .project_base h1 {
+      margin-left: 00px;
+      margin-right: 0px;
+      padding-right: 95px;
+      width: fit-content;
+
+    }
+    .expand-projects{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: center;
+
+    }
+    .projects_left{
+      width: 100%;
+    }
+    .project_row_middle{
+      
+      width: 100%;
+    
+    }
+    .custom-carousel {
+      display: flex; 
+      flex-direction: row;
+      height: 250px;
+      width: 75%;
+      align-items: center;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .expand-projects img{
+      margin-right: 0px;
+    }
+   
+  }

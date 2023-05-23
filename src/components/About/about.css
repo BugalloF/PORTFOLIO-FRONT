@@ -1,0 +1,74 @@
+.about_row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;    
+    width: 100%;
+}
+
+.about_row img{
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    margin-left: 800px;
+}
+.about_left{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+ /* hello arriba nombre */
+.about_left img{
+    width: 35px;
+    position: absolute;
+    top: -20px;
+    left: -400px;
+}
+
+.about_left button{
+    padding: 8px;
+    margin-left: 30px;
+    width: 100px;
+    cursor: pointer;
+
+}
+
+@media(width<800px){
+    .about_row{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;    
+        width: 100%;
+        margin: 0;
+    }
+    .about_row img{
+        border-radius: 50%;
+        width: 250px;
+        height: 250px;
+        padding-bottom: 0px;
+        margin-left: 0px;
+        
+    }
+    .about_row h1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;    
+        width: 100%;
+    }
+    .about_row h5 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;    
+        width: 100%;
+    }
+    .about_left img{
+        position: inherit;
+        margin-left: 60px;
+    }
+    
+}

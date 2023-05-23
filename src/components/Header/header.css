@@ -1,0 +1,82 @@
+.btn-lan{
+    background-color: black;
+    border: none;
+    cursor: pointer;
+    gap: 50px;
+}
+.btn-lan img{
+    width: 30px;
+    height: 30px;
+
+}
+
+.disabled{
+    width: 30px;
+    height: 30px;
+    opacity: 0.3;
+}
+
+.header{
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 40px;
+    margin-right: 40px;
+    position: sticky;
+    top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 40px;
+}
+
+.header_row{
+    display: flex;
+    flex-direction: row;
+}
+.header img{
+    height: 40px;
+    width: 40px;
+    
+}
+
+.show-hide{
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+}
+
+.show-hide button{
+    border: none;
+    background: none;
+    cursor: pointer;
+
+}
+.show-hide button img{
+    width: 50px;
+}
+
+
+.changeEye{
+    overflow: hidden;
+     opacity: 0;
+     animation: blur-out 1.5s ease-in forwards;;
+}
+
+.disabledd{
+    overflow: hidden;
+    opacity: 1;
+    animation: blur-in-eye 1s ease-in;
+}
+
+
+@keyframes blur-in-eye {
+    0% {
+      opacity: 0;
+      filter: blur(100);
+    }
+    100% {
+      opacity: 1;
+      filter: blur(0); /* Ajusta el valor de blur según tu preferencia */
+    }
+  }

@@ -1,0 +1,60 @@
+.hello{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  text-align: center;
+  font-size: 75px;
+  font-family: 'Carlito';
+}
+
+.me {
+
+  overflow: hidden;
+  opacity: 0;
+  animation: blur-in 2s ease-in-out 1s, blur-out 3s ease-in-out 2;
+  color: white;
+  
+}
+
+.port{
+  overflow: hidden;
+  opacity: 0;
+  animation: blur-in 3s ease-in-out;
+  color: white;
+  animation-delay: 0.5s; /* Retraso de 2 segundos */
+
+}
+
+.me .port{
+  margin: 0px 0px;
+}
+
+@keyframes blur-in {
+  0% {
+    opacity: 0;
+    filter: blur(100);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0); /* Ajusta el valor de blur según tu preferencia */
+  }
+}
+
+
+@keyframes blur-out {
+  0% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  100% {
+    opacity: 0;
+    filter: blur(10px); /* Ajusta el valor de blur según tu preferencia */
+  }
+}
