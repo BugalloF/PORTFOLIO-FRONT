@@ -93,7 +93,6 @@
   justify-content: center;
   overflow: hidden;
   opacity: 0;
-
   animation: expand 1.5s ease forwards;
 
   }
@@ -174,4 +173,6 @@
     margin-left: 45px;
     animation: fadeOut 1.5s ease forwards;
     }
-    }
+    
+
+}

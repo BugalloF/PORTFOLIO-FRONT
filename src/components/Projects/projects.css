@@ -222,5 +222,32 @@
     .expand-projects img{
       margin-right: 0px;
     }
+
+    .project_container-hidden{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: fit-content;
+      overflow: hidden;
+      opacity: 0;
+      animation: fadeOut 2s ease forwards;
+      margin-left: 5px;
+      margin-right: 5px;
+      border-top: 1px solid white;
+    }
+    .middle_row{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 15px;
+      align-items: center;
+      justify-items: center;
+    }
+
+
+    .project_row_middle{
+      width: 80%;
+    
+    }
    
   }

@@ -119,6 +119,7 @@
   
 
   @media(width<800px){
+
     .jobs_container{
         display: flex;
         flex-direction: column;
@@ -129,18 +130,19 @@
         cursor: pointer;
         width: 100%;
     }
+
     .jobs_h1{
         display: flex;
         width: 100%;
     }
-    
-    
+
     .expand-jobs{
         display: flex;
         flex-direction: row;
         cursor: pointer;
         justify-content: flex-start;
     }
+
     .jobs_row{
         display: flex;
         flex-direction: column;
@@ -152,22 +154,25 @@
         animation: expand 2s ease forwards;
         padding-bottom: 5px;
     }
+
     .jobs_row p{
         width: 80%;
         padding-right: 100px;
     }
+
     .jobs_left{
         width: 80%;
         margin-left: 0px;
-    }.logo-container {
+    }
+
+    .logo-container {
         grid-template-columns: repeat(3, 0.5fr);
         grid-gap: 1px;
         width: 100%;
         margin-left: 10px;
-
       }
 
-      .jobs_row-hidden{
+    .jobs_row-hidden{
         display: flex;
         flex-direction: column;
         height: 1000px;

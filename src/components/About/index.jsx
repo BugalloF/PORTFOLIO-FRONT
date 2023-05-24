@@ -32,7 +32,7 @@ function About({MEDIA_URL,lan}){
             <h1>{t('about')}</h1>
             <h5>{t('about_desc')}</h5>
             <div className='about_row'>
-            <Button variant="outlined" startIcon={<PictureAsPdfIcon/>} style={buttonStyles} onClick={()=>window.open(`${MEDIA_URL}media/cv/FB_${lan}.pdf`)}>
+            <Button variant="outlined" startIcon={<PictureAsPdfIcon/>} style={buttonStyles} onClick={()=>window.open(`${MEDIA_URL}/media/cv/FB_${lan}.pdf`)}>
               CV
                 </Button>
                 <Button variant="outlined" startIcon={<PhoneIcon />} style={buttonStyles} onClick={scrollToBottom}>
