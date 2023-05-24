@@ -11,9 +11,9 @@ function Education({education,MEDIA_URL,expandedSection,toggleSection}){
                 <div className='expand-educ' >
                     <h1>{t('education')}</h1>
                     {expandedSection['Hide_Education'] ?
-                                <img src={minus}/>
+                                <img src={minus} alt='expand'/>
                                 :
-                                <img src={plus}/>
+                                <img src={plus} alt='expand'/>
                     }        
                 </div>
                 {
@@ -49,7 +49,7 @@ function Education({education,MEDIA_URL,expandedSection,toggleSection}){
                                         <h3>{el.started} - {el.ended == null ? 'Actualidad' : el.ended}</h3>
                                     </div>
                                     <p>{el.description}</p>
-                                    <img src={`${MEDIA_URL}${el.image}`} alt="img" />
+                                    <img src={`${MEDIA_URL}${el.image}`} alt="institute-logo" />
                                 </div>
                             )
                         }).sort((a, b) => new Date(a.started) - new Date(b.started)).reverse()

@@ -27,7 +27,7 @@ function About({MEDIA_URL,lan}){
     <div className='about_row'>
         <div className='about_left'>
             <h1>Fermin Bugallo</h1>
-            {isMobile ? <img src={`${MEDIA_URL}media/cv/CV.jpg`} alt="Fermin" /> : <></> }
+            {isMobile ? <img src={`${MEDIA_URL}/media/cv/CV.jpg`} alt="Fermin" /> : <></> }
             {/* <img src="https://www.svgrepo.com/show/42915/hello-speech-bubble-handmade-chatting-symbol.svg" alt="" /> */}
             <h1>{t('about')}</h1>
             <h5>{t('about_desc')}</h5>
@@ -40,7 +40,7 @@ function About({MEDIA_URL,lan}){
                 </Button>
             </div>
         </div>
-        {!isMobile ? <img src={`${MEDIA_URL}media/cv/CV.jpg`} alt="Fermin" /> : <></> }
+        {!isMobile ? <img src={`${MEDIA_URL}/media/cv/CV.jpg`} alt="Fermin" /> : <></> }
         
     </div>)
 }

@@ -7,16 +7,15 @@ import plus from '../../assets/icons/plus.svg'
 function Skills ({skills,toggleSection,expandedSection}){
     const { t } = useTranslation();
     const {REACT_APP_API_MEDIA} = process.env
-    console.log(expandedSection);
     return(
      <div className='skills_container'>
         <div className='expand' onClick={()=>toggleSection('Hide_Skills')}>
 
             <h1>{t('skills')}</h1>
             {expandedSection['Hide_Skills'] ?
-                        <img src={minus}/>
+                        <img src={minus} alt='expand'/>
                         :
-                        <img src={plus}/>
+                        <img src={plus} alt='expand'/>
                     }        
 
         </div>
@@ -59,9 +58,9 @@ function Skills ({skills,toggleSection,expandedSection}){
         <div className='expand' onClick={()=>toggleSection('Hide_Soft_Skills')}>
             <h1>{t('soft_skills')}</h1>
             {expandedSection['Hide_Soft_Skills'] ?
-            <img src={minus}/>
+            <img src={minus} alt='expand'/>
             :
-            <img src={plus}/>
+            <img src={plus} alt='expand'/>
             }        
         </div>
 

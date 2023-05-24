@@ -66,9 +66,9 @@ function Projects({projects,MEDIA_URL,openLightbox,toggleSection,expandedSection
             <div className='expand-projects' onClick={()=>toggleSection('Hide_Projects')} >
                         <h1>{t('projects')}</h1>
                         {expandedSection['Hide_Projects'] ?
-                                    <img src={minus}/>
+                                    <img src={minus} alt='expand'/>
                                     :
-                                    <img src={plus}/>
+                                    <img src={plus} alt='expand'/>
                         }        
               </div>
             {
@@ -82,11 +82,11 @@ function Projects({projects,MEDIA_URL,openLightbox,toggleSection,expandedSection
                   <div className='projects_left' >
                     <h3>{project.title}</h3>
                     <h5>{project.started} - {project.ended == null ? 'Actualidad' : project.ended}</h5>
-                    <img src={`${MEDIA_URL}${project.logo}`} alt="" />
+                    <img src={`${MEDIA_URL}${project.logo}`} alt="project-logo" />
                   {expandedProject[project.title] ?
-                    <button onClick={()=>toggleProject(project.title)}><img src={minus}/></button>
+                    <button onClick={()=>toggleProject(project.title)}><img src={minus} alt='expand'/></button>
                     :
-                    <button onClick={()=>toggleProject(project.title)}><img src={plus}/></button>
+                    <button onClick={()=>toggleProject(project.title)}><img src={plus} alt='expand'/></button>
                   }
                   </div>
                   <div className={`project_row_middle`}>
@@ -95,7 +95,7 @@ function Projects({projects,MEDIA_URL,openLightbox,toggleSection,expandedSection
                         {
                           project.url_back ?
                           <Button variant="outlined" style={buttonStyles} onClick={()=>handleButtonClick(project.url_back)}>
-                            <img src={github} alt="" style={{ width: '20px', height: '20px' }}
+                            <img src={github} alt="repo" style={{ width: '20px', height: '20px' }}
                             />
                             &nbsp;
                             {project.url_front ? 'Backend' : t('repositories')}
@@ -106,7 +106,7 @@ function Projects({projects,MEDIA_URL,openLightbox,toggleSection,expandedSection
                          {
                           project.url_front ? 
                           <Button variant="outlined" style={buttonStyles} onClick={()=>handleButtonClick(project.url_front)}>
-                            <img src={github} alt="" style={{ width: '20px', height: '20px' }}/>
+                            <img src={github} alt="repo" style={{ width: '20px', height: '20px' }}/>
                             &nbsp;
                             FrontEnd
                           </Button>
@@ -173,11 +173,11 @@ function Projects({projects,MEDIA_URL,openLightbox,toggleSection,expandedSection
                   <div className='projects_left' >
                     <h3>{project.title}</h3>
                     <h5>{project.started} - {project.ended == null ? 'Actualidad' : project.ended}</h5>
-                    <img src={`${MEDIA_URL}${project.logo}`} alt="" />
+                    <img src={`${MEDIA_URL}${project.logo}`} alt="project-logo" />
                   {expandedProject[project.title] ?
-                    <button onClick={()=>toggleProject(project.title)}><img src={minus}/></button>
+                    <button onClick={()=>toggleProject(project.title)}><img src={minus} alt='expand'/></button>
                     :
-                    <button onClick={()=>toggleProject(project.title)}><img src={plus}/></button>
+                    <button onClick={()=>toggleProject(project.title)}><img src={plus} alt='expand'/></button>
                   }
                   </div>
                   <div className={`project_row_middle`}>

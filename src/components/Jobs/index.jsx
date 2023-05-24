@@ -12,9 +12,9 @@ function Jobs({jobs,MEDIA_URL,toggleSection,expandedSection}){
                 <div className='expand-jobs' >
                         <h1>{t('jobs')}</h1>
                         {expandedSection['Hide_Jobs'] ?
-                                    <img src={minus}/>
+                                    <img src={minus} alt='expand'/>
                                     :
-                                    <img src={plus}/>
+                                    <img src={plus} alt='expand'/>
                         }        
                     </div>
                 
