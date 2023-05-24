@@ -1,7 +1,8 @@
-import {GET_EDUCATION,GET_JOBS,GET_PROJECTS,GET_SKILLS} from '../actions/Types'
+import {GET_EDUCATION,GET_JOBS,GET_PROJECTS,GET_SKILLS,GET_SOFT_SKILLS} from '../actions/Types'
 
 const initialState = {
     skills:[],
+    soft_skills:[],
     jobs:[],
     education:[],
     projects:[]
@@ -13,6 +14,11 @@ const initialState = {
             return {
                 ...state,
                     skills:action.payload
+            }
+        case GET_SOFT_SKILLS:
+            return{
+                ...state,
+                    soft_skills:action.payload
             }
         case GET_JOBS:
             return {

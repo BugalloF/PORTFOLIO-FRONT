@@ -1,7 +1,7 @@
 //Actions/index.js
 
 import axios from "axios";
-import {GET_EDUCATION,GET_JOBS,GET_PROJECTS,GET_SKILLS} from "./Types"
+import {GET_EDUCATION,GET_JOBS,GET_PROJECTS,GET_SKILLS,GET_SOFT_SKILLS} from "./Types"
 
 const {REACT_APP_API_URL} = process.env
 export function FetchEducation(language) {
@@ -33,9 +33,16 @@ export function FetchProjects(language) {
   }
 
 
-export function FetchSkills(language) {
+export function FetchSkills() {
     return async function (dispatch) {
-      let getSkills = (await axios.get(`${REACT_APP_API_URL}/skills/?lan=${language}`)).data;
+      // Dejo este en español ya que el nombre de las technologías no cambia según el idioma y sería en vano cargar dos veces lo mismo.
+      let getSkills = (await axios.get(`${REACT_APP_API_URL}/skills/?lan=es`)).data;
       return dispatch({ type: GET_SKILLS, payload: getSkills });
+    };
+  }
+  export function FetchSoftSkills(language) {
+    return async function (dispatch) {
+      let getSoftSkills = (await axios.get(`${REACT_APP_API_URL}/skills/?lan=${language}`)).data;
+      return dispatch({ type: GET_SOFT_SKILLS, payload: getSoftSkills });
     };
   }

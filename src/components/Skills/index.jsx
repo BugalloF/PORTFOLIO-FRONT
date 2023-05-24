@@ -4,7 +4,7 @@ import SoftSkillsCard from '../SoftSkillsCard/index.jsx';
 import minus from '../../assets/icons/minus.svg'
 import plus from '../../assets/icons/plus.svg'
 
-function Skills ({skills,toggleSection,expandedSection}){
+function Skills ({skills,soft_skills,toggleSection,expandedSection}){
     const { t } = useTranslation();
     const {REACT_APP_API_MEDIA} = process.env
     return(
@@ -69,7 +69,7 @@ function Skills ({skills,toggleSection,expandedSection}){
                 <div className='grid-container-soft'>
                     
                     {
-                        skills.map(skill => { 
+                        soft_skills.map(skill => { 
                             if(skill.is_soft_skill){
                                 return <SoftSkillsCard
                                     title={skill.title}
@@ -85,7 +85,7 @@ function Skills ({skills,toggleSection,expandedSection}){
             <div className='grid-container-soft-hidden'>
                     
                     {
-                        skills.map(skill => { 
+                        soft_skills.map(skill => { 
                             if(skill.is_soft_skill){
                                 return <SoftSkillsCard
                                     title={skill.title}

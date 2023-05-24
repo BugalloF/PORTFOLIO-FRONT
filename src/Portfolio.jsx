@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { FetchEducation,FetchJobs,FetchProjects,FetchSkills} from "./redux/actions";
+import { FetchEducation,FetchJobs,FetchProjects,FetchSkills,FetchSoftSkills} from "./redux/actions";
 import { useParams } from 'react-router-dom';
 import Background from "./components/Framer/index.jsx";
 import Hello from "./components/Hello/Hello.jsx";
@@ -56,6 +56,7 @@ function Portfolio(){
           dispatch(FetchJobs(lan));
           dispatch(FetchProjects(lan));
           dispatch(FetchSkills(lan));
+          dispatch(FetchSoftSkills(lan));
           setTimeout(() => {
             setAnimationComplete(true)
           }, 2000);
@@ -66,6 +67,7 @@ function Portfolio(){
 
     const jobs_arr = useSelector(state=>state.jobs)
     const skills_arr = useSelector(state=>state.skills)
+    const soft_skills_arr = useSelector(state=>state.soft_skills)
     const education_arr = useSelector(state=>state.education)
     const projects_arr = useSelector(state=>state.projects)
     
@@ -90,6 +92,7 @@ function Portfolio(){
 
           <Skills
             skills={skills_arr}
+            soft_skills={soft_skills_arr}
             MEDIA_URL={REACT_APP_API_MEDIA}
             expandedSection={expandedSection}
             toggleSection={toggleSection}
