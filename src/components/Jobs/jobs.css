@@ -6,12 +6,12 @@
     margin-left: 50px;
     margin-right: 50px;
     /* padding-bottom: 20px; */
-    cursor: pointer;
 }
 .jobs_h1{
     display: flex;
     justify-content: space-between;
     width: 100%;
+    cursor: pointer;
 }
 
 

@@ -23,6 +23,7 @@ function Portfolio(){
     const [lightboxProjectIndex, setLightboxProjectIndex] = useState(0);
     const [scrollPosition, setScrollPosition] = useState(0);
     const {REACT_APP_API_MEDIA} = process.env
+    const [eye,setEye]= useState(2)
     const {lan} = useParams()
     
     const openLightbox = (idx,index) => {
@@ -44,11 +45,22 @@ function Portfolio(){
       Hide_Education:true,
       Hide_Projects:true
     });
+    function has_true(objeto) {
+      for (let key in objeto) {
+        if (objeto.hasOwnProperty(key) && objeto[key] === true) {
+          return true; // Si se encuentra una propiedad con valor false, se retorna true
+        }
+      }
+      return false; // Si no se encuentra ninguna propiedad con valor false, se retorna false
+    }
     const toggleSection = (SectionName) => {
         setExpandedSection({
           ...expandedSection,
           [SectionName]: !expandedSection[SectionName],
         });
+        if(has_true(expandedSection)){
+          setEye(1)
+        }
     };
 
     useEffect(() => {
@@ -83,6 +95,8 @@ function Portfolio(){
           <Header
           expandedSection={expandedSection}
           setExpandedSection={setExpandedSection}
+          eye={eye}
+          setEye={setEye}
           />
 
           <About

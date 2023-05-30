@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  cursor: pointer;
 }
 .project_base h1 {
   margin-left: 150px;
@@ -15,6 +14,7 @@
   display: flex;
   flex-direction: row;
   width: 100%;
+  cursor: pointer;
 }
 .expand-projects img{
   margin-left: -105px;

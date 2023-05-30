@@ -4,9 +4,8 @@ import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import closeAll from '../../assets/icons/eye-closed-svgrepo-com.svg'
 import openAll from '../../assets/icons/eye-open-svgrepo-com.svg'
-import { useState } from 'react';
 
-function Header({expandedSection,setExpandedSection}){
+function Header({expandedSection,setExpandedSection,eye,setEye}){
     const { i18n } = useTranslation();
     const navigate = useNavigate();
     const currentURL = window.location.pathname.slice(-2);
@@ -20,7 +19,6 @@ function Header({expandedSection,setExpandedSection}){
         navigate('/en')
       }      
     }
-    const [eye,setEye]= useState(2)
 
     const setValueSections=(objeto,boolean,eye)=>{
       setEye(eye)

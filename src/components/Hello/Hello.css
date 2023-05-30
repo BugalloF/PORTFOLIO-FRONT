@@ -18,7 +18,7 @@
 
   overflow: hidden;
   opacity: 0;
-  animation: blur-in 2s ease-in-out 1s, blur-out 3s ease-in-out 2;
+  animation: blur-in 2s ease-in-out 1s, blur-out 3s ease-in-out 3;
   color: white;
   
 }
@@ -28,7 +28,6 @@
   opacity: 0;
   animation: blur-in 3s ease-in-out;
   color: white;
-  animation-delay: 0.5s; /* Retraso de 2 segundos */
 
 }
 

@@ -7,8 +7,8 @@ function Jobs({jobs,MEDIA_URL,toggleSection,expandedSection}){
     const { t } = useTranslation();
 
     return(
-        <div className="jobs_container" onClick={()=>toggleSection('Hide_Jobs')}>
-            <div className='jobs_h1' >
+        <div className="jobs_container" >
+            <div className='jobs_h1'onClick={()=>toggleSection('Hide_Jobs')} >
                 <div className='expand-jobs' >
                         <h1>{t('jobs')}</h1>
                         {expandedSection['Hide_Jobs'] ?
