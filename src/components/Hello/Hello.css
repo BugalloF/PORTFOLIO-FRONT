@@ -18,7 +18,7 @@
 
   overflow: hidden;
   opacity: 0;
-  animation: blur-in 2s ease-in-out 1s, blur-out 3s ease-in-out 3;
+  animation: blur-in 1.5s ease-in-out, blur-out 3s ease-in-out;
   color: white;
   
 }
@@ -26,19 +26,16 @@
 .port{
   overflow: hidden;
   opacity: 0;
-  animation: blur-in 3s ease-in-out;
+  animation: blur-in 2s ease-in-out;
   color: white;
 
 }
 
-.me .port{
-  margin: 0px 0px;
-}
 
 @keyframes blur-in {
   0% {
     opacity: 0;
-    filter: blur(100);
+    filter: blur(10px);
   }
   100% {
     opacity: 1;
@@ -54,6 +51,6 @@
   }
   100% {
     opacity: 0;
-    filter: blur(10px); /* Ajusta el valor de blur según tu preferencia */
+    filter: blur(100px); /* Ajusta el valor de blur según tu preferencia */
   }
 }
