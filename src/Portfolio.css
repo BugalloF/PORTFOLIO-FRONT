@@ -20,10 +20,11 @@
     100% {
       opacity: 1;
       filter: blur(0); /* Ajusta el valor de blur según tu preferencia */
-      background-color: white;
+      background-color: black;
     }
   }
 
 .ril-image-current ril__image{
     padding-bottom: 400px;
 }
+

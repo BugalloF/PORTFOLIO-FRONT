@@ -1,0 +1,50 @@
+.bottom-ad1 {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    z-index: 999; /* Asegura que el anuncio se muestre en la parte superior de otros elementos */
+    animation: blur-in-container 1.5s ease-in forwards;
+    
+  }
+  
+  .bottom-ad1-hide {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    z-index: 999; /* Asegura que el anuncio se muestre en la parte superior de otros elementos */
+    animation: blur-out 1.5s ease-in forwards;
+    pointer-events: none;
+    cursor: none;
+  }
+  
+  .bottom-ad1 button {
+    text-decoration: none;
+    position: absolute;
+    margin-left: 450px;
+    border: none;
+    width: 20px;
+    z-index: 9999; /* Asegura que el anuncio se muestre en la parte superior de otros elementos */
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  .bottom-ad1-hide button {
+    text-decoration: none;
+    position: absolute;
+    margin-left: 450px;
+    border: none;
+    width: 20px;
+    z-index: 9999; /* Asegura que el anuncio se muestre en la parte superior de otros elementos */
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  
+  .bottom-ad1 img{
+    cursor: pointer;
+  }
+  

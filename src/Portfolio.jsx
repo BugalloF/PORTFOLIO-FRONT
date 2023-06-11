@@ -14,6 +14,7 @@ import About from "./components/About/index.jsx";
 import Footer from "./components/Footer/index.jsx";
 import MouseEffect from "./components/MouseEffect/index.jsx";
 import './Portfolio.css'
+import Ads from "./components/Ads";
 
 function Portfolio(){
     const dispatch = useDispatch();
@@ -62,6 +63,16 @@ function Portfolio(){
           setEye(1)
         }
     };
+    const [expandAd,setExpandedAd]=useState({
+      Ad_1:true
+    })
+
+    const toggleAd = (adNumber) => {
+      setExpandedAd({
+        ...expandAd,
+        [adNumber]: !expandAd[adNumber],
+      });
+  };
 
     useEffect(() => {
           dispatch(FetchEducation(lan));
@@ -82,7 +93,6 @@ function Portfolio(){
     const soft_skills_arr = useSelector(state=>state.soft_skills)
     const education_arr = useSelector(state=>state.education)
     const projects_arr = useSelector(state=>state.projects)
-    
     return (
       
       !animationComplete ? <Hello/> :
@@ -134,8 +144,11 @@ function Portfolio(){
 
           <Footer
           />
-         
         </div>
+        <Ads
+          expandAd={expandAd}
+          toggleAd={toggleAd}
+        />
       </div>
       :   
 
@@ -146,6 +159,7 @@ function Portfolio(){
       onCloseRequest={()=>closeLightbox()}
       imagePadding={100}
       />  
+      
       
     )     
 }       
