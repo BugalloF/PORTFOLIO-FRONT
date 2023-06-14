@@ -48,3 +48,37 @@
     cursor: pointer;
   }
   
+  .bottom-ad1-mobile {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    z-index: 999; /* Asegura que el anuncio se muestre en la parte superior de otros elementos */
+    animation: blur-in-container 1.5s ease-in forwards;
+    
+  }
+
+
+  .bottom-ad1-mobile button {
+    text-decoration: none;
+    position: absolute;
+    margin-left: 70px;
+    border: none;
+    width: 20px;
+    z-index: 9999; /* Asegura que el anuncio se muestre en la parte superior de otros elementos */
+    height: 15px;
+    cursor: pointer;
+  }
+
+  .bottom-ad1-mobile-hide {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    z-index: 999; /* Asegura que el anuncio se muestre en la parte superior de otros elementos */
+    animation: blur-out 1.5s ease-in forwards;
+    pointer-events: none;
+    cursor: none;
+  }
