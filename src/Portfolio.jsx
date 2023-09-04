@@ -14,7 +14,7 @@ import About from "./components/About/index.jsx";
 import Footer from "./components/Footer/index.jsx";
 import MouseEffect from "./components/MouseEffect/index.jsx";
 import './Portfolio.css'
-import Ads from "./components/Ads";
+// import Ads from "./components/Ads";
 
 function Portfolio(){
     const dispatch = useDispatch();
@@ -63,18 +63,19 @@ function Portfolio(){
           setEye(1)
         }
     };
-    const [expandAd,setExpandedAd]=useState({
-      Ad_1:true
-    })
+    // const [expandAd,setExpandedAd]=useState({
+    //   Ad_1:true
+    // })
 
-    const toggleAd = (adNumber) => {
-      setExpandedAd({
-        ...expandAd,
-        [adNumber]: !expandAd[adNumber],
-      });
-  };
+  //   const toggleAd = (adNumber) => {
+  //     setExpandedAd({
+  //       ...expandAd,
+  //       [adNumber]: !expandAd[adNumber],
+  //     });
+  // };
 
     useEffect(() => {
+          console.log(`Interested on my profile? \nContact me!\n\%c+34622435300`,'color:red');
           dispatch(FetchEducation(lan));
           dispatch(FetchJobs(lan));
           dispatch(FetchProjects(lan));
@@ -145,10 +146,10 @@ function Portfolio(){
           <Footer
           />
         </div>
-        <Ads
+        {/* <Ads
           expandAd={expandAd}
           toggleAd={toggleAd}
-        />
+        /> */}
       </div>
       :   
 

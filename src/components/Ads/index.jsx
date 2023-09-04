@@ -15,7 +15,7 @@ function Ads ({expandAd,toggleAd}){
             :
             <div className="bottom-ad1-mobile">
             <button onClick={()=>toggleAd('Ad_1')}> X </button>
-            <a href="https://www.exoclick.com/signup/?login=bugallof"><img src="https://www.exoclick.com/banners/80x30.gif" border="0"/></a>
+            <a href="https://www.exoclick.com/signup/?login=bugallof"><img src="https://www.exoclick.com/banners/80x30.gif" alt='Ads' border="0"/></a>
           </div>
         :
         window.innerWidth>600 ?

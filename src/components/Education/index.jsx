@@ -37,7 +37,7 @@ function Education({education,MEDIA_URL,expandedSection,toggleSection}){
                                     <img src={`${MEDIA_URL}${el.image}`} alt="img" />
                                 </div>
                             )
-                        }).sort((a, b) => new Date(a.started) - new Date(b.started)).reverse()
+                        }).sort((a, b) => new Date(a.started) - new Date(b.started))
                         
                     :
                     <div>
