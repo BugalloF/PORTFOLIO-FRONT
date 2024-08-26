@@ -76,7 +76,12 @@ function Projects({projects,MEDIA_URL,openLightbox,toggleSection,expandedSection
               <div>
 
             {
-              projects?.map((project,idx) => (
+              projects
+              ?.sort((a, b) => {
+                const dateA = new Date(a.started.split('/').reverse().join('/'));
+                const dateB = new Date(b.started.split('/').reverse().join('/'));
+                return dateB - dateA; // Ordenar desde la fecha más reciente a la más antigua
+              })?.map((project,idx) => (
                 <div key={project.id} className={'project_container'} >
 
                   <div className='projects_left' >
@@ -116,6 +121,7 @@ function Projects({projects,MEDIA_URL,openLightbox,toggleSection,expandedSection
                         {
                           project.url_deploy ? 
                           <Button variant="outlined" style={buttonStyles} onClick={()=>handleButtonClick(project.url_deploy)}>
+                                                        
                             <img src={world} alt="" style={{ width: '20px', height: '20px' }}/>
                             &nbsp;
                             Deploy
@@ -158,7 +164,7 @@ function Projects({projects,MEDIA_URL,openLightbox,toggleSection,expandedSection
                     ))}
                   </Carousel>
                 </div>
-              )).sort((a, b) => b.ended - a.ended).reverse()
+              ))
             }
             </div>
             :
@@ -167,9 +173,13 @@ function Projects({projects,MEDIA_URL,openLightbox,toggleSection,expandedSection
             <div>
 
             {
-              projects?.map((project,idx) => (
+              projects
+              ?.sort((a, b) => {
+                const dateA = new Date(a.started.split('/').reverse().join('/'));
+                const dateB = new Date(b.started.split('/').reverse().join('/'));
+                return dateB - dateA; // Ordenar desde la fecha más reciente a la más antigua
+              })?.map((project,idx) => (
                 <div key={project.id} className={'project_container-hidden'} >
-
                   <div className='projects_left' >
                     <h3>{project.title}</h3>
                     <h5>{project.started} - {project.ended == null ? 'Actualidad' : project.ended}</h5>
@@ -249,7 +259,7 @@ function Projects({projects,MEDIA_URL,openLightbox,toggleSection,expandedSection
                     ))}
                   </Carousel>
                 </div>
-              )).sort((a, b) => b.ended - a.ended).reverse()
+              ))
             }
             </div>
             }
