@@ -26,7 +26,8 @@ function Portfolio(){
     const {REACT_APP_API_MEDIA} = process.env
     const [eye,setEye]= useState(2)
     const {lan} = useParams()
-    
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 800);
+
     const openLightbox = (idx,index) => {
       setLightboxProjectIndex(idx)
         setLightboxIndex(index);
@@ -63,19 +64,22 @@ function Portfolio(){
           setEye(1)
         }
     };
-    // const [expandAd,setExpandedAd]=useState({
-    //   Ad_1:true
-    // })
 
-  //   const toggleAd = (adNumber) => {
-  //     setExpandedAd({
-  //       ...expandAd,
-  //       [adNumber]: !expandAd[adNumber],
-  //     });
-  // };
+    // Detect mobile failure
+    useEffect(() => {
+      const handleResize = () => {
+          setIsMobile(window.innerWidth < 800);
+      };
+
+      window.addEventListener('resize', handleResize);
+
+      return () => {
+          window.removeEventListener('resize', handleResize);
+      };
+  }, [isMobile]);
 
     useEffect(() => {
-          console.log(`Interested on my profile? \nContact me!\n\%c+34622435300`,'color:red');
+          console.log(`Interested on my profile? \nContact me!\n\%c+34622435300`,'color:red')
           dispatch(FetchEducation(lan));
           dispatch(FetchJobs(lan));
           dispatch(FetchProjects(lan));
